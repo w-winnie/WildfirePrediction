@@ -12,14 +12,15 @@ GIT
 
 Initialize:
 git init
+git remote add origin https://github.com/w-winnie/WildfirePrediction.git
 git add -A
 git commit -m "Initialize Repo"
-git remote add origin https://github.com/w-winnie/WildfirePrediction.git
 
 Push:
 git add -A
+git diff --name-only --cached --diff-filter=AM
 git commit -m "Commit message"
-git push -u -f origin master
+git push -u -f origin main
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 RESOURCES
