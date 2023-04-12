@@ -1,0 +1,29 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VENV
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+conda create -n venv-wildfire python=3.7 
+conda activate venv-wildfire
+conda install -n venv-jupyter ipykernel --update-deps --force-reinstall
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+GIT
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Initialize:
+git init
+git add -A
+git commit -m "Initialize Repo"
+git remote add origin https://github.com/w-winnie/WildfirePrediction.git
+
+Push:
+git add -A
+git commit -m "Commit message"
+git push -u -f origin master
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RESOURCES
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+https://www.kaggle.com/datasets/abdelghaniaaba/wildfire-prediction-dataset
+
