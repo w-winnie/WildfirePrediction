@@ -24,6 +24,21 @@ git diff --name-only --cached --diff-filter=AM
 git commit -m "ReSet up.. pheww"
 git push -u -f origin master
 
+Email:
+git config user.email winniew314@gmail.com
+
+git filter-branch --commit-filter '
+  if [ "$GIT_COMMITTER_EMAIL" = "wwinnie@pelmorex.com" ];
+  then
+      GIT_COMMITTER_EMAIL="winniew314@gmail.com";
+      git commit-tree "$@";
+  else
+      git commit-tree "$@";
+  fi' -f
+
+cmd:
+git filter-branch --commit-filter "if [ \"%GIT_COMMITTER_EMAIL%\" = \"wwinnie@pelmorex.com\" ]; then GIT_COMMITTER_EMAIL=\"winniew314@gmail.com\"; git commit-tree \"%@\"; else git commit-tree \"%@\"; fi" -f
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 RESOURCES
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
