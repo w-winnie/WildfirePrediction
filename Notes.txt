@@ -5,6 +5,7 @@ VENV
 conda create -n venv-wildfire python=3.7 
 conda activate venv-wildfire
 conda install -n venv-jupyter ipykernel --update-deps --force-reinstall
+conda install spyder
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 GIT
@@ -17,14 +18,16 @@ git add -A
 git commit -m "Initialize Repo"
 
 Push:
+pip freeze > requirements.txt 
 git add -A
 git diff --name-only --cached --diff-filter=AM
-git commit -m "Commit message"
-git push -u -f origin main
+git commit -m "ReSet up.. pheww"
+git push -u -f origin master
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 RESOURCES
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-https://www.kaggle.com/datasets/abdelghaniaaba/wildfire-prediction-dataset
+Source 1 - https://www.kaggle.com/datasets/abdelghaniaaba/wildfire-prediction-dataset
+Source 2 - http://archive.ics.uci.edu/ml/datasets/Forest+Fires
 
