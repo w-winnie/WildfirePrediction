@@ -24,7 +24,11 @@ git diff --name-only --cached --diff-filter=AM
 git commit -m "ReSet up.. pheww"
 git push -u -f origin master
 
-Email:
+Branch:
+git branch main
+git checkout main
+
+Email user change:
 git config user.email winniew314@gmail.com
 
 git filter-branch --env-filter '

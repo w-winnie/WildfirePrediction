@@ -1,0 +1,58 @@
+Certainly! Here's a summary of the useful Git commands discussed in this session:
+
+1. To change the email address associated with your Git commits globally:
+   ```
+   git config --global user.email "you@example.com"
+   ```
+
+2. To change the email address associated with your Git commits for a specific repository:
+   ```
+   git config user.email "you@example.com"
+   ```
+
+3. To create a new branch in Git:
+   ```
+   git branch new-branch-name
+   ```
+
+4. To switch to a different branch:
+   ```
+   git checkout branch-name
+   ```
+
+5. To add a remote repository:
+   ```
+   git remote add origin <remote-url>
+   ```
+
+6. To verify the remote repository URL:
+   ```
+   git remote -v
+   ```
+
+7. To commit changes:
+   ```
+   git commit -m "Your commit message"
+   ```
+
+8. To push a branch to a remote repository:
+   ```
+   git push -u origin branch-name
+   ```
+
+9. To change the author email of existing Git commits:
+   ```
+   git filter-branch --env-filter '
+   if [ "$GIT_COMMITTER_EMAIL" = "<old-email>" ]; then
+       export GIT_COMMITTER_EMAIL="<new-email>"
+   fi
+   if [ "$GIT_AUTHOR_EMAIL" = "<old-email>" ]; then
+       export GIT_AUTHOR_EMAIL="<new-email>"
+   fi
+   ' -- --all
+   ```
+
+10. To force-push the changes to the remote repository after modifying the commit history:
+    ```
+    git push --force --all
+    ```
