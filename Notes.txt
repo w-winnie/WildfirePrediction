@@ -11,34 +11,12 @@ conda install spyder
 GIT
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Initialize:
-git init
-git remote add origin https://github.com/w-winnie/WildfirePrediction.git
-git add -A
-git commit -m "Initialize Repo"
-
 Push:
 pip freeze > requirements.txt 
 git add -A
 git diff --name-only --cached --diff-filter=AM
 git commit -m "ReSet up.. pheww"
 git push -u -f origin master
-
-Branch:
-git branch main
-git checkout main
-
-Email user change:
-git config user.email winniew314@gmail.com
-
-git filter-branch --env-filter '
-if [ "$GIT_COMMITTER_EMAIL" = "wwinnie@pelmorex.com" ]; then
-    export GIT_COMMITTER_EMAIL="winniew314@gmail.com"
-fi
-if [ "$GIT_AUTHOR_EMAIL" = "wwinnie@pelmorex.com" ]; then
-    export GIT_AUTHOR_EMAIL="winniew314@gmail.com"
-fi
-' -- --all
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 RESOURCES
